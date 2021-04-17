@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav_graph"
+    app:startDestination="@id/firstFragment">
+
+    <fragment
+        android:id="@+id/firstFragment"
+        android:name="pdp.uz.a1_4database.ui.FirstFragment"
+        android:label="fragment_first"
+        tools:layout="@layout/fragment_first">
+        <action
+            android:id="@+id/action_firstFragment_to_secondFragment"
+            app:destination="@id/secondFragment" />
+        <action
+            android:id="@+id/action_firstFragment_to_fourFragment"
+            app:destination="@id/fourFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/thirdFragment"
+        android:name="pdp.uz.a1_4database.ui.ThirdFragment"
+        android:label="fragment_third"
+        tools:layout="@layout/fragment_third">
+        <action
+            android:id="@+id/action_thirdFragment_to_firstFragment"
+            app:destination="@id/firstFragment"
+            app:popUpTo="@id/firstFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/secondFragment"
+        android:name="pdp.uz.a1_4database.ui.SecondFragment"
+        android:label="fragment_second"
+        tools:layout="@layout/fragment_second">
+        <action
+            android:id="@+id/action_secondFragment_to_thirdFragment"
+            app:destination="@id/thirdFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/fiveFragment"
+        android:name="pdp.uz.a1_4database.ui.FiveFragment"
+        android:label="fragment_five"
+        tools:layout="@layout/fragment_five">
+        <action
+            android:id="@+id/action_fiveFragment_to_sixFragment"
+            app:destination="@id/sixFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fourFragment"
+        android:name="pdp.uz.a1_4database.ui.FourFragment"
+        android:label="fragment_four"
+        tools:layout="@layout/fragment_four">
+        <action
+            android:id="@+id/action_fourFragment_to_fiveFragment"
+            app:destination="@id/fiveFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sixFragment"
+        android:name="pdp.uz.a1_4database.ui.SixFragment"
+        android:label="fragment_six"
+        tools:layout="@layout/fragment_six" />
+</navigation>
